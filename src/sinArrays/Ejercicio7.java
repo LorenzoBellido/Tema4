@@ -29,13 +29,12 @@ public class Ejercicio7 {
 		// Bucle para dibujar un diagrama de la temperatura en cada mes
 		for(int i = 0; i < tabla.length; i++) {
 			System.out.print(meses[i]);
-		
-		
 			for (int j = 1; j <= tabla[i]; j++) {
-				System.out.print(" #");
+				System.out.print("#");
 			
 			
-		}System.out.println("");
+		}
+			System.out.println(" " + tabla[i] + " Cº");
 }
 		// Cierro el Scanner
 		sc.close();
