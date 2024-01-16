@@ -43,6 +43,9 @@ public class Ejercicio3 {
 		}else {
 			System.out.println("Las tablas son diferentes.");
 		}
+		
+		// Cierro el Scanner
+		sc.close();
 	}
 
 }

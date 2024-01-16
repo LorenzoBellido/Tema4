@@ -7,12 +7,16 @@ public class Ejercicio7 {
 
 	public static void main(String[] args) {
 
+		// Tabla con los números premiados
 		int primitiva[] = { 1, 7, 23, 33, 41, 45 };
 
+		// Tabla con los numeros apostados
 		int apuesta[] = new int[6];
 
+		// Numeros acertados de la apuesta
 		int aciertos = 0;
 
+		// 
 		for (int i = 0; i < primitiva.length; i++) {
 			apuesta[i] = (int) (1 + Math.random() * 49);
 
@@ -29,6 +33,7 @@ public class Ejercicio7 {
 			}
 		}
 
+		// Ordeno la tabla y cuento los aciertos
 		Arrays.sort(apuesta);
 		for (int i = 0; i < primitiva.length; i++) {
 			if (apuesta[i] == primitiva[i]) {
@@ -37,8 +42,7 @@ public class Ejercicio7 {
 
 		}
 
-		System.out.println(Arrays.toString(apuesta));
-		System.out.println(Arrays.toString(primitiva));
+		// Muestro los numeros acertados
 		System.out.println("Has acertado " + aciertos + " números");
 	}
 
