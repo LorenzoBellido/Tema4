@@ -15,33 +15,20 @@ public class Ejercicio7 {
 
 		// Numeros acertados de la apuesta
 		int aciertos = 0;
+		
+		//
+		int indice = 0;
+		
+		//
+		int valor = -1;
 
-		// 
-		for (int i = 0; i < primitiva.length; i++) {
-			apuesta[i] = (int) (1 + Math.random() * 49);
-
-			if (i > primitiva.length) {
-				if (apuesta[i] == apuesta[i + 1]) {	
-					Arrays.sort(apuesta);
-					apuesta[i] = (int) (1 + Math.random() * 49);
-				}
-			}
-				else if (i > 0) {
-				if (apuesta[i] == apuesta[i - 1]) {
-					apuesta[i] = (int) (1 + Math.random() * 49);
-				}
-			}
+		while(indice < primitiva.length && valor != apuesta[indice]) {
+			valor = (int) (1 + Math.random()*49);
+			
 		}
-
-		// Ordeno la tabla y cuento los aciertos
-		Arrays.sort(apuesta);
-		for (int i = 0; i < primitiva.length; i++) {
-			if (apuesta[i] == primitiva[i]) {
-				aciertos++;
-			}
-
-		}
-
+		
+		
+		
 		// Muestro los numeros acertados
 		System.out.println("Has acertado " + aciertos + " números");
 	}
