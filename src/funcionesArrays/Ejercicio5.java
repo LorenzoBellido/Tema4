@@ -47,7 +47,8 @@ public class Ejercicio5 {
 		
 		for(int i = 0; i < t.length; i++) {
 			if(t[i] == valor) {
-				indices[index++] = i;
+				indices[index] = i;
+				index++;
 			}
 		}
 		
