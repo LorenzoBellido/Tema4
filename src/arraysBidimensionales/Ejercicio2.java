@@ -1,5 +1,6 @@
 package arraysBidimensionales;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Ejercicio2 {
@@ -14,7 +15,7 @@ public class Ejercicio2 {
 				
 		int maxima = Integer.MIN_VALUE;
 		
-		int media = 0;
+		float media = 0;
 		
 		Scanner sc = new Scanner(System.in);
 		
@@ -24,9 +25,10 @@ public class Ejercicio2 {
 				tabla[i][j] = sc.nextInt();
 			}
 		}
+		
 		for(int fila[] : tabla) {
+			media = 0;
 			for(int valor : fila) {
-				
 				System.out.print(valor + "\t");
 				if(minima > valor) {
 					minima = valor;
@@ -36,12 +38,12 @@ public class Ejercicio2 {
 				}
 				media = media + valor;
 			}
-			media = media / 20;
+			System.out.println(minima);
+			System.out.println(maxima);
+			System.out.println(media);
+			media = media / 5;
 			System.out.println();
 		}
-		System.out.println("La nota maxima fue: " + maxima);
-		System.out.println("La nota mínima fue: " + minima);
-		System.out.println("La media es: " + media);
 
 	}
 
