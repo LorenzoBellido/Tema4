@@ -46,7 +46,7 @@ public class Ejercicio3 {
 	public static void rellenar(int[][] tabla, int n, int m) {
 		for (int i = 0; i < n; i++) {
 			for (int j = 0; j < m; j++) {
-				tabla[i][j] = 10 * (i + 1) + (j + 1);
+				tabla[i][j] = 10 * (i) + (j);
 			}
 		}
 	}
