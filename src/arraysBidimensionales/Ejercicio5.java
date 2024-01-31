@@ -4,61 +4,56 @@ import java.util.Random;
 
 public class Ejercicio5 {
 
-	public static final int TAMAÑO = 4;
-
 	public static void main(String[] args) {
 
+		// Variable donde guardar la suma de cada fila
 		int sumaFila = 0;
 
+		// Variable donde guardar la suma de cada columna
 		int sumaColumna = 0;
 		
-		int contador = 0;
+		// Variable donde guardar la suma total de los números
+		int total = 0;
 
-		int tabla[][] = new int[TAMAÑO][TAMAÑO];
+		// Creo la tabla con los valores recibidos de la funcion
+		int tabla[][] = sumatorio();
 
-		tabla = sumatorio();
-
-//		for(int fila[]:tabla) {
-//			sumaFila = 0;
-//			for(int valor:fila) {
-//				System.out.print(valor + "\t");
-//				sumaFila = sumaFila + valor;
-//			}
-//			System.out.print(sumaFila + "\t");
-//			System.out.println();
-//			
-//		}
-
-		for (int i = 0; i < TAMAÑO; i++) {
+		// Bucle que recorre cada valor por filas, los imprime y muestra la suma de cada fila
+		for(int fila[]:tabla) {
 			sumaFila = 0;
-			for (int j = 0; j < TAMAÑO; j++) {
-				System.out.print(tabla[i][j] + "\t");
-				sumaFila = sumaFila + tabla[i][j];
-				System.out.print(sumaFila);
+			for(int valor:fila) {
+				System.out.print(valor + "\t");
+				sumaFila += valor;
 			}
-			
+			System.out.print(sumaFila + "\t");
 			System.out.println();
 		}
-		
+
+		// Bucle que recorre cada valor por columnas, los imprime y muestra la suma de cada columna
 		for(int j = 0; j < tabla[0].length; j++) {
 			sumaColumna = 0;
 			for(int i = 0; i < tabla.length; i++) {
-				sumaColumna = sumaColumna + tabla[i][j];
-				System.out.print(sumaColumna + "\t");
+				sumaColumna += tabla[i][j];
 			}
+			total += sumaColumna;
+			System.out.print(sumaColumna + "\t");
+			
 		}
+		// Imprimo el valor total de la suma de todos los números
+		System.out.println(total + "\t");
 		
 
 	}
 
+	// Añado los valores a la tabla y la devuelvo
 	public static int[][] sumatorio() {
-		int tabla[][] = new int[TAMAÑO][TAMAÑO];
+		int tabla[][] = new int[4][5];
 
 		Random rand = new Random();
 
-		for (int i = 0; i < TAMAÑO; i++) {
-			for (int j = 0; j < TAMAÑO; j++) {
-				tabla[i][j] = rand.nextInt(100, 999);
+		for (int i = 0; i < 4; i++) {
+			for (int j = 0; j < 5; j++) {
+				tabla[i][j] = rand.nextInt(100, 1000);
 			}
 		}
 
