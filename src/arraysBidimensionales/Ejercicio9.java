@@ -5,7 +5,7 @@ public class Ejercicio9 {
 	public static void main(String[] args) {
 
 		// Creaos la tabla bidimensional
-		int tabla[][] = { { 2, 3, 1 }, { 3, 1, 2 }, { 1, 2, 4 } };
+		int tabla[][] = { { 8, 1, 6 }, { 3, 5, 7}, { 4, 9, 2} };
 
 		// Llamamos a la función para comprobar si la tabla es mágica o no
 		if (esMagica(tabla)) {
